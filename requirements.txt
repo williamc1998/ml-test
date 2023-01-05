@@ -1,0 +1,5 @@
+streamlit-lottie
+numpy
+pandas
+altair
+matplotlib
