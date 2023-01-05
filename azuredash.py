@@ -28,7 +28,7 @@ with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
         st.subheader('ML scoring Dashboard')
-        st.title('Prediction analytics Page')
+        st.title('Azure backend demonstration')
         st.write('Cloud deployed logistic regression API called on this page to predict JSON data')
     with right_column:
         st_lottie(lottie_coding, height=300, key='coding')
