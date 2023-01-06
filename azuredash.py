@@ -10,6 +10,7 @@ import altair as alt
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
+from PIL import Image
 
 
 st.set_page_config(page_title='API call', page_icon=':rocket:')
@@ -24,11 +25,13 @@ def load_lottieurl(url):
 lottie_coding = load_lottieurl('https://assets5.lottiefiles.com/private_files/lf30_jyndijva.json')
 
 with st.container():
+    image = Image.open('/Users/william/Downloads/Agilisys-Logo-Black-RGB.png')
+    st.image(image)
     st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
-        st.subheader('ML scoring Dashboard')
-        st.title('Azure backend demonstration')
+        st.subheader('ML backend demonstration')
+        st.title('Azure dependant scoring')
         st.write('Cloud deployed logistic regression API called on this page to predict JSON data')
     with right_column:
         st_lottie(lottie_coding, height=300, key='coding')
