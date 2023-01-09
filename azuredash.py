@@ -1,4 +1,4 @@
-import datetime
+import datetime,requests
 import pickle
 from pathlib import Path
 import requests
@@ -11,6 +11,11 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 from PIL import Image
+from io import BytesIO
+
+url = 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Agilisys-Logo-Black-RGB.png'
+response = requests.get(url)
+img = Image.open(BytesIO(response.content))
 
 
 st.set_page_config(page_title='API call', page_icon=':rocket:')
@@ -25,7 +30,7 @@ def load_lottieurl(url):
 lottie_coding = load_lottieurl('https://assets5.lottiefiles.com/private_files/lf30_jyndijva.json')
 
 with st.container():
-    image = Image.open('/Users/william/Downloads/Agilisys-Logo-Black-RGB.png')
+    image = img
     st.image(image)
     st.write("---")
     left_column, right_column = st.columns(2)
