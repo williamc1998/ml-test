@@ -68,7 +68,7 @@ with st.container():
                 body = data
 
 
-                url = 'http://d30c0598-3fa6-4e82-874b-4862c5bf3a3c.uksouth.azurecontainer.io/score'
+                url = 'http://1f529717-4167-4806-971f-a91fd449e981.uksouth.azurecontainer.io/score'
 
 
                 headers = {'Content-Type':'application/json'}
